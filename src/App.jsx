@@ -21,18 +21,20 @@ const Footer = (props) => (
 )
 
 const App = () => {
-  const course = 'Industry Electives 1'
-  const parts = [
-    { name: 'Information Management 2', units: 3 },
-    { name: 'Networking 2', units: 3 },
-    { name: 'Data Analytics 1', units: 3 },
-  ]
+  const course = {
+    name: 'Industry Electives 1',
+    parts: [
+      { name: 'Information Management 2', units: 3 },
+      { name: 'Networking 2', units: 3 },
+      { name: 'Data Analytics 1', units: 3 },
+    ],
+  }
 
   return (
     <div>
-      <Header course={course} />
-      <Content parts={parts} />
-      <Total parts={parts} />
+      <Header course={course.name} />
+      <Content parts={course.parts} />
+      <Total parts={course.parts} />
       <Footer fullName="Yesha Kangel O. Hermosilla" courseCode="CSIT340" section="G6" />
     </div>
   )
